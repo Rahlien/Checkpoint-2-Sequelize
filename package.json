@@ -19,8 +19,8 @@
   "devDependencies": {
     "chai": "^3.0.0",
     "chai-as-promised": "^5.1.0",
-    "mocha": "^2.2.5",
-    "supertest": "^1.0.1",
+    "mocha": "^6.1.4",
+    "supertest": "^4.0.2",
     "supertest-as-promised": "^2.0.1"
   }
 }
