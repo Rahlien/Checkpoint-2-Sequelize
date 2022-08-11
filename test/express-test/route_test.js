@@ -10,7 +10,7 @@ describe('Todo routes', function () {
   });
 
   describe('`/users` URI', function () {
-    xit('GET responds with an empty array at first', function () {
+    it('GET responds with an empty array at first', function () {
       // when we make requests to `/users` we will get back an empty array
       return supertest // supertest object lets us make & test HTTP req/res
         .get('/users') // makes an HTTP request: GET '/users'

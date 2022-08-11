@@ -6,12 +6,14 @@
   "scripts": {
     "test": "mocha test --recursive --watch",
     "express-test": "mocha test/express-test --watch",
-    "sequelize-test": "mocha test/sequelize-test --watch"
+    "sequelize-test": "mocha test/sequelize-test --watch",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.12.4",
+    "nodemon": "^2.0.19",
     "pg": "^8.3.0",
     "sequelize": "^6.3.3"
   },
