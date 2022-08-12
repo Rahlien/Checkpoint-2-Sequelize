@@ -42,8 +42,6 @@ module.exports = {
        }
     }
     
-  
-    console.log(tasks)
   },
 
   list: function (name) {
