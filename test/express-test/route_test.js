@@ -131,7 +131,7 @@ describe('Todo routes', function () {
           });
       });
 
-      xit('DELETE removes a specific task', function () {
+      it('DELETE removes a specific task', function () {
         todos.add('david', { content: 'interview fellows' });
         todos.add('david', { content: 'judge stackathon' });
         todos.add('david', { content: 'code review' });
@@ -156,7 +156,7 @@ describe('Todo routes', function () {
         todos.add('billy', { content: 'enable requests for specific todos' });
       });
 
-      xit('GET can get just the completed tasks', function () {
+      it('GET can get just the completed tasks', function () {
         return supertest
           .get('/users/billy/tasks?status=complete')
           .expect(200)

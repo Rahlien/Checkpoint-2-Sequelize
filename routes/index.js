@@ -38,6 +38,18 @@ router.get('/', (req, res, next) => {
     }
 })
 
+// router.GET('/:name/tasks?status=value', (req, res, next) => {
+//     try {
+        
+//         res.send(
+//             req.query.value
+//         )
+//     }
+//     catch (ex) {
+//         next(ex)
+//     }
+// })
+
 router.get('/:name/tasks', async(req, res, next) => {
     try{
 
@@ -75,31 +87,31 @@ router.post('/:name/tasks', (req, res, next) => {
     }
 })
 
-router.put('/:index', (req, res, next) => {
+router.put('/:name/tasks/:index', (req, res, next) => {
     try{
         // console.log(`this is ${req.params}`)
         // console.log(`this is ${req.params.name}`)
         // todos.complete(req.params.name, req.params)
         // console.log(`this is ${todos.list(req.params.name)}`)
+        console.log(req.params)
         todos.complete(req.params.name, 1)
+        res.sendStatus(200)
     }
     catch (ex) {
         next(ex)
     }
 })
 
-// router.delete('/:index', (req, res, next) => {
-//     try{
+router.delete('/:name/tasks/:index', (req, res, next) => {
+    try{
 
-//         todos.remove(req.params.name, req.params.index)
-//         res.redirect(
-//             todos.list(req.params.name)[0]
-//         )
-//     }
-//     catch (ex) {
-//         next(ex)
-//     }
-// })
+        todos.remove(req.params.name, req.params.index)
+        res.sendStatus(204)
+    }
+    catch (ex) {
+        next(ex)
+    }
+})
 
 
 
